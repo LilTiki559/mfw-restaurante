@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Raleway:300,400,700');
+
+:root {
+  --raleway: 'Raleway', sans-serif;
+  --lobster: 'Lobster', cursive, sans-serif;
+
+  --white: #fff;
+  --orange: #f7472a;
+  --light-shadow: rgba(0, 0, 0, .2);
+  --dark-shadows: rgba(0, 0, 0, .6);
+}
+
+/* OOCSS */
+
+.font-bold {
+  font-weight: bolder;
+}
+
+/* Style */
+.logo h1 {
+  font-family: var(--raleway);
+  font-weight: 700;
+}
+
+body {
+  background: black;\
+  position: relative;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 60px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar li,
+.navbar a {
+  height: 60px;
+  margin: 0;
+  color: var(--white);
+  text-shadow: 1px 1px 2px var(--dark-shadows)
+}
+
+.nav-pills > li > a {
+  border-radius: 0;
+  display: flex;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.cutlery-logo {
+  width: 250px;
+}
+
+.carousel-caption {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-caption .btn {
+  background: orange;
+}
+
+.carousel-inner > .item > img {
+  width: 100%;
+
+}
+#story, #review, #menu, #contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#story {
+  background:var(--white);
+}
+
+.story-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: : calc(150px - 45px);
+}
+
+.story-header {
+  font-family: var(--lobster);
+  font-size: 70px;
+  color: var(--orange)
+  text-shadow: 1px 1px 3px var(--dark-shadow);
+}
+
+.story-tag{
+  font-size: 24px;
+}
+.story-right {
+  display: flex;
+  align-items: center;      /* changed align-items: to justify-content: but thhen went for the div option to remove parent child relationship for paragraphs */
+  flex-direction: column;
+}
+.year {
+  position: absolute;
+  font-family: var(--lobster);
+  font-size: 150px;
+  color: var(--light-shadow);
+  margin: 0;
+}
+
+.container-border::before {
+  content: '';
+  display: block;
+  background: #777;
+  height: 4px;
+  border-radius: 2px;
+  margin-bottom: 50px;
+}
+
+#review {
+  background: url('../img/food_review.jpg');
+  background-size: cover;
+}
+
+.review-info {
+  background: var(--dark-shadow);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.review-header {
+  color: var(--dark-shadow);
+  font-family: var(--lobster);
+  text-shadow: 1px 1px 3px var(--dark-shadow)
+}
+
+.review-body{
+  color: var(--white);
+  font-size: 20px;
+  font-family: var(--raleway);
+}
+
+#menu {
+  background: rebeccapurple;
+}
+
+#contact {
+  background: dodgerblue;
+}
